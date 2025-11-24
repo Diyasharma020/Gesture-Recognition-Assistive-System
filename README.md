@@ -17,7 +17,8 @@ Features
 
 • Lightweight, runs on any laptop webcam
 
-Project Structure
+Project Structure:
+
 gesture detection-project
 
 • app.py (Streamlit real-time gesture interface)
