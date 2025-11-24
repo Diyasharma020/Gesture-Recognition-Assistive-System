@@ -53,6 +53,8 @@ Project Structure:
 
 • requirements.txt
 
+• screenshots/ (Output images and system demonstration) 
+
 • README.md
 
 Requirements
