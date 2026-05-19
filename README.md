@@ -1,6 +1,6 @@
 Gesture Recognition Assistive Communication System using Python, OpenCV & MediaPipe
 
-A real-time hand-gesture detection system that recognizes 8 commonly used gestures and converts them into simple English phrases. Built to support individuals with speech impairments by providing a quick and intuitive communication method.
+A real-time hand-gesture detection system that recognizes commonly used gestures and converts them into simple English phrases. Built to support individuals with speech impairments by providing a quick and intuitive communication method.
 
 Problem Definition :
 The system aims to assist individuals with speech impairments by providing an automatic method to interpret hand gestures. It detects eight predefined gestures through a webcam and converts them into meaningful English phrases for easier communication.
