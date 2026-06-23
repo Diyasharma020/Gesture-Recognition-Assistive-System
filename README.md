@@ -1,97 +1,173 @@
-Gesture Recognition Assistive Communication System using Python, OpenCV & MediaPipe
+# Gesture Recognition Assistive Communication System
 
-A real-time hand-gesture detection system that recognizes commonly used gestures and converts them into simple English phrases. Built to support individuals with speech impairments by providing a quick and intuitive communication method.
+**Python | OpenCV | MediaPipe | Streamlit**
 
-Problem Definition :
-The system aims to assist individuals with speech impairments by providing an automatic method to interpret hand gestures. It detects eight predefined gestures through a webcam and converts them into meaningful English phrases for easier communication.
+A real-time hand gesture recognition system that detects commonly used hand gestures and converts them into meaningful English phrases. The application is designed to assist individuals with speech impairments by enabling fast, intuitive, and contactless communication using only a standard webcam.
 
-System Design & Modularization-
-The project follows a modular structure:
+---
 
-• Camera Module: Captures real-time frames from the webcam.
+## Problem Statement
 
-• Detection Module: Uses MediaPipe to extract 21 hand landmarks and applies geometric rules to classify gestures.
+Individuals with speech impairments often rely on sign language or hand gestures to communicate, which may not always be understood by others. This project provides an AI-powered solution that automatically recognizes predefined hand gestures in real time and translates them into simple English phrases, improving accessibility and communication.
 
-• UI Module (app.py): Handles the Streamlit interface, displays video feed, highlights detected gestures, and provides tuning controls.
+---
 
-• Utility Functions: Provide optional text-to-speech and snapshot saving.
+## System Architecture
 
-Algorithm Summary-
+The project follows a modular architecture for improved scalability and maintainability.
 
-1)Capture a video frame from the webcam.
+### 1. Camera Module
 
-2)Detect hand landmarks using MediaPipe’s hand-tracking model.
+* Captures real-time video frames using OpenCV.
+* Streams frames continuously to the gesture detection pipeline.
 
-3)Determine finger extension by comparing tip and pip positions.
+### 2. Gesture Detection Module
 
-4)Calculate distances and angles between landmarks to identify specific gestures.
+* Uses MediaPipe Hands to detect 21 hand landmarks.
+* Classifies gestures using geometric rules based on finger positions, landmark distances, and joint angles.
 
-5)Use a voting buffer to avoid flickering and ensure stable predictions.
+### 3. User Interface Module (`app.py`)
 
-6)Map the detected gesture to a predefined English phrase and display it.
+* Built using Streamlit.
+* Displays live webcam feed.
+* Highlights detected gestures.
+* Provides adjustable detection thresholds.
+* Allows users to save snapshots.
 
-Features-
-• Real-time gesture detection using OpenCV and MediaPipe
+### 4. Utility Module
 
-• Supports 8 meaningful gestures (Help, Yes, No, OK, Wait, Thank You, I’m Okay, Call Me)
+* Optional text-to-speech support using `pyttsx3`.
+* Snapshot capture and image saving utilities.
 
-• Streamlit web app for clean UI and live preview
+---
 
-• Optional text-to-speech output
+## Working Algorithm
 
-• Works fully offline
+1. Capture a frame from the webcam.
+2. Detect hand landmarks using MediaPipe's hand-tracking model.
+3. Determine finger extension by comparing fingertip and PIP joint positions.
+4. Compute distances and angles between landmarks to identify gesture patterns.
+5. Apply a voting buffer across consecutive frames to eliminate prediction flickering.
+6. Map the recognized gesture to its corresponding English phrase.
+7. Display the detected phrase in real time through the Streamlit interface.
 
-• Accurate detection with tuning sliders
+---
 
-• Lightweight, runs on any laptop webcam
+## Key Features
 
-Project Structure:
+* Real-time hand gesture recognition
+* MediaPipe-based 21-point hand landmark detection
+* Supports **8 predefined gestures**
 
-• app.py (Streamlit real-time gesture interface)
+  * Help
+  * Yes
+  * No
+  * OK
+  * Wait
+  * Thank You
+  * I'm Okay
+  * Call Me
+* Interactive Streamlit web interface
+* Live webcam preview
+* Adjustable detection thresholds
+* Optional text-to-speech output
+* Snapshot saving functionality
+* Lightweight and runs entirely offline
+* Compatible with any standard laptop webcam
 
-• gesture.py (Standalone gesture detection script)
+---
 
-• requirements.txt
+## Project Structure
 
-• screenshots/ (Output images and system demonstration) 
+```
+Gesture-Recognition/
+│
+├── app.py                 # Streamlit application
+├── gesture.py             # Gesture recognition engine
+├── requirements.txt       # Python dependencies
+├── screenshots/           # Sample outputs
+└── README.md
+```
 
-• README.md
+---
 
-Requirements
-Install dependencies:
-pip install opencv-python
+## Installation
 
-pip install mediapipe
+Clone the repository:
 
-pip install streamlit
+```bash
+git clone <repository-url>
+cd Gesture-Recognition
+```
 
-pip install pyttsx3 (optional for voice output)
+Install the required packages:
 
-Usage-
+```bash
+pip install -r requirements.txt
+```
 
-Run the standalone detector:
-python gesture.py-
+or install manually:
 
-• Opens webcam
+```bash
+pip install opencv-python mediapipe streamlit pyttsx3
+```
 
-• Detects gestures
+---
 
-• Displays recognized phrase
+## Running the Project
 
-Run the Streamlit interface:
-python -m streamlit run app.py -
+### Method 1: Standalone Gesture Detector
 
-• Shows live video preview
+```bash
+python gesture.py
+```
 
-• Highlights detected gestures
+This will:
 
-• Lets you adjust thresholds and tuning
+* Open the webcam
+* Detect hand gestures in real time
+* Display the corresponding English phrase
 
-• Allows snapshot saving
+---
 
-• Supports optional text-to-speech
+### Method 2: Streamlit Web Interface
 
-Screenshots-
+```bash
+streamlit run app.py
+```
+
+The Streamlit application provides:
+
+* Live webcam feed
+* Real-time gesture recognition
+* Detection confidence tuning
+* Snapshot capture
+* Optional voice output
+
+---
+
+## Future Enhancements
+
+* Deep learning-based gesture classification
+* Support for complete sign language alphabets
+* Multi-hand gesture recognition
+* Speech-to-text and text-to-speech integration
+* Mobile and web deployment
+* Multilingual phrase translation
+
+---
+
+## Applications
+
+* Assistive communication for individuals with speech impairments
+* Smart healthcare systems
+* Human-computer interaction
+* Educational demonstrations
+* Contactless gesture-controlled interfaces
+
+---
+
+## Screenshots-
 <img width="1920" height="1080" alt="Screenshot (159)" src="https://github.com/user-attachments/assets/06231564-3e7d-4b1f-afd1-14b531126167" />
 <img width="1920" height="1080" alt="Screenshot (160)" src="https://github.com/user-attachments/assets/8c7a70cd-824c-4305-b0bc-b15b09e68d9b" />
 <img width="1920" height="1080" alt="Screenshot (161)" src="https://github.com/user-attachments/assets/f417aad1-c925-48a9-a59c-846304ee86da" />
