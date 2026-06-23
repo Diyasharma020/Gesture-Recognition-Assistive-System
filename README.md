@@ -91,5 +91,18 @@ python -m streamlit run app.py -
 
 • Supports optional text-to-speech
 
+Screenshots-
+<img width="1920" height="1080" alt="Screenshot (159)" src="https://github.com/user-attachments/assets/06231564-3e7d-4b1f-afd1-14b531126167" />
+<img width="1920" height="1080" alt="Screenshot (160)" src="https://github.com/user-attachments/assets/8c7a70cd-824c-4305-b0bc-b15b09e68d9b" />
+<img width="1920" height="1080" alt="Screenshot (161)" src="https://github.com/user-attachments/assets/f417aad1-c925-48a9-a59c-846304ee86da" />
+<img width="1920" height="1080" alt="Screenshot (163)" src="https://github.com/user-attachments/assets/bb8300a7-3b60-48e6-abb0-a38eed308792" />
+<img width="1920" height="1080" alt="Screenshot (164)" src="https://github.com/user-attachments/assets/b55a061b-76e2-4026-b47a-fc56603f58df" />
+<img width="1920" height="1080" alt="Screenshot (165)" src="https://github.com/user-attachments/assets/6fc7c019-459f-4f9b-a107-5e92eed60bca" />
+<img width="1920" height="1080" alt="Screenshot (166)" src="https://github.com/user-attachments/assets/330cdf8a-10d7-4eb5-935e-95d71f91e7c0" />
+<img width="1920" height="1080" alt="Screenshot (167)" src="https://github.com/user-attachments/assets/2bbaef8e-5ce3-4652-8899-53052d49e6df" />
+<img width="1920" height="1080" alt="Screenshot (168)" src="https://github.com/user-attachments/assets/edf83f26-23c9-4257-ae1b-62515d1c8564" />
+
+
+
 Technologies Used- 
 Python, OpenCV, MediaPipe Hands, Streamlit, NumPy, pyttsx3 (optional)
